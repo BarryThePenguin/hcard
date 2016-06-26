@@ -1,0 +1,12 @@
+$brand-primary: rgb(44, 62, 80);
+$brand-secondary: rgb(154, 154, 154);
+
+$brand-info: rgb(52, 152, 219);
+$brand-default: rgb(98, 123, 139);
+
+$btn-default-color: rgb(255, 255, 255);
+$btn-default-bg: $brand-default;
+$btn-default-border: darken($btn-default-bg, 5%);
+
+$font-family-sans-serif: "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: "Merriweather", Georgia, "Times New Roman", Times, serif;

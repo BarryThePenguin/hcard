@@ -1,0 +1,173 @@
+@import "variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700|Merriweather+Sans:400,700);
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body,
+#app {
+	height: 100%;
+}
+
+#app {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 28px;
+	color: $brand-primary;
+	font-weight: bold;
+}
+
+h2 {
+	color: $brand-secondary;
+	line-height: $line-height-computed;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+label {
+	margin-bottom: 0;
+	font-weight: normal;
+	color: $brand-primary;
+	text-transform: uppercase;
+}
+
+label.btn {
+	text-transform: none;
+}
+
+.btn {
+	margin: 4px;
+	box-shadow: 1px 1px 5px $brand-secondary;
+}
+
+.btn-default {
+	border-bottom: 4px solid darken($brand-default, 15%);
+}
+
+.btn-info {
+	border-bottom: 4px solid darken($brand-info, 15%);
+}
+
+@media (min-width: $screen-md-min) {
+	.row-height {
+		display: table;
+		table-layout: fixed;
+		height: 100%;
+		width: 100%;
+	}
+
+	.builder,
+	.card {
+		display: table-cell;
+		float: none;
+		height: 100%;
+	}
+}
+
+.builder {
+	border-right: 5px solid transparentize($brand-secondary, 0.8);
+	background-color: rgb(255, 255, 255);
+	padding: 40px;
+
+	h2 {
+		margin: 25px 0;
+		font-size: 10px;
+		border-bottom: 1px solid $brand-secondary;
+	}
+}
+
+.card {
+	background-color: transparentize($brand-primary, 0.85);
+
+	h2 {
+		font-size: 16px;
+		text-align: right;
+	}
+}
+
+.card-container {
+	margin: 0 auto;
+
+	@media (min-width: $screen-md-min) {
+		width: 430px;
+	}
+}
+
+.card-header {
+	height: 100px;
+	position: relative;
+	background-color: $brand-primary;
+}
+
+.card-name {
+	font-family: $font-family-serif;
+	color: rgb(255, 255, 255);
+	padding-left: 25px;
+	position: absolute;
+	bottom: 10px;
+}
+
+.card-avatar {
+	overflow: hidden;
+	position: absolute;
+	padding: 5px;
+	top: 10px;
+	right: 15px;
+	height: 100px;
+	width: 78px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 1px 0 1px transparentize($brand-secondary, 0.25);
+
+	.avatar {
+		height: 100%;
+		background-attachment: local;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: cover;
+	}
+}
+
+.card-details {
+	padding: 25px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 1px 2px 2px 0 transparentize($brand-secondary, 0.25);
+
+	div {
+		position: relative;
+		text-transform: uppercase;
+		height: $line-height-computed;
+		border-bottom: 1px solid $brand-secondary;
+		margin-bottom: 10px;
+
+		font-size: 10px;
+		color: $brand-primary;
+		line-height: $line-height-computed;
+	}
+
+	div:nth-last-child(-n+2) {
+		width: 50%;
+		float: left;
+	}
+
+	span {
+		position: absolute;
+		left: 75px;
+		text-transform: none;
+
+		font-size: 16px;
+		font-family: "Merriweather";
+		color: rgb(0, 0, 0);
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
